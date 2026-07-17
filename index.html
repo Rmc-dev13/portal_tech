@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal Corporativo de Demandas e Talentos Tech</title>
+
+    <style>
+
+        /* =====================================
+           RESET
+        ====================================== */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background:#eef3f8;
+            color:#333;
+        }
+
+        /* =====================================
+           CABEÇALHO
+        ====================================== */
+
+        header{
+
+            background:linear-gradient(135deg,#0F4C81,#2563EB);
+
+            color:white;
+
+            padding:35px;
+
+            text-align:center;
+
+            box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+        }
+
+        header h1{
+
+            font-size:34px;
+
+            margin-bottom:10px;
+
+        }
+
+        header p{
+
+            font-size:18px;
+
+            opacity:.95;
+
+        }
+
+        /* =====================================
+           CONTAINER
+        ====================================== */
+
+        .container{
+
+            width:92%;
+
+            max-width:1300px;
+
+            margin:auto;
+
+            padding:30px 0;
+
+        }
+
+        /* =====================================
+           FORMULÁRIOS
+        ====================================== */
+
+        .formularios{
+
+            display:flex;
+
+            gap:25px;
+
+            flex-wrap:wrap;
+
+            justify-content:center;
+
+            margin-bottom:40px;
+
+        }
+
+        .form-box{
+
+            background:white;
+
+            flex:1;
+
+            min-width:320px;
+
+            padding:25px;
+
+            border-radius:12px;
+
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+        }
+
+        .form-box h2{
+
+            color:#0F4C81;
+
+            margin-bottom:20px;
+
+        }
+
+        label{
+
+            display:block;
+
+            margin-top:15px;
+
+            margin-bottom:6px;
+
+            font-weight:bold;
+
+        }
+
+        input{
+
+            width:100%;
+
+            padding:12px;
+
+            border:1px solid #CCC;
+
+            border-radius:6px;
+
+            font-size:15px;
+
+        }
+
+        button{
+
+            margin-top:20px;
+
+            width:100%;
+
+            padding:13px;
+
+            border:none;
+
+            border-radius:8px;
+
+            cursor:pointer;
+
+            background:#2563EB;
+
+            color:white;
+
+            font-size:16px;
+
+            transition:.3s;
+
+        }
+
+        button:hover{
+
+            background:#0F4C81;
+
+        }
+
+        /* =====================================
+           CARDS
+        ====================================== */
+
+        .cards{
+
+            display:flex;
+
+            flex-wrap:wrap;
+
+            gap:25px;
+
+            justify-content:center;
+
+        }
+
+        .card{
+
+            background:white;
+
+            width:360px;
+
+            border-radius:12px;
+
+            overflow:hidden;
+
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+            transition:.3s;
+
+        }
+
+        .card:hover{
+
+            transform:translateY(-8px);
+
+            box-shadow:0 14px 30px rgba(0,0,0,.18);
+
+        }
+
+        .card-topo{
+
+            background:#2563EB;
+
+            color:white;
+
+            padding:18px;
+
+        }
+
+        .card-conteudo{
+
+            padding:20px;
+
+        }
+
+        .card-conteudo p{
+
+            margin:8px 0;
+
+            line-height:1.5;
+
+        }
+
+        .tag{
+
+            display:inline-block;
+
+            background:#E8F0FF;
+
+            color:#0F4C81;
+
+            padding:6px 12px;
+
+            border-radius:20px;
+
+            margin:5px 5px 0 0;
+
+            font-size:13px;
+
+            font-weight:bold;
+
+        }
+
+        footer{
+
+            margin-top:40px;
+
+            background:#0F4C81;
+
+            color:white;
+
+            text-align:center;
+
+            padding:20px;
+
+        }
+
+        /* =====================================
+           RESPONSIVIDADE
+        ====================================== */
+
+        @media(max-width:768px){
+
+            .formularios{
+
+                flex-direction:column;
+
+            }
+
+            .card{
+
+                width:100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Cabeçalho principal -->
+
+    <header>
+
+        <h1>Portal Corporativo de Demandas e Talentos Tech</h1>
+
+        <p>
+            Gestão de demandas, tecnologias e consultores especializados.
+        </p>
+
+    </header>
+
+    <div class="container">
+        <!-- ==========================================
+             FORMULÁRIOS
+             ========================================== -->
+
+        <section class="formularios">
+
+            <!-- ===========================================================
+                 Formulário de Pesquisa de Tecnologias
+                 Método GET
+                 =========================================================== -->
+            <div class="form-box">
+
+                <h2>Pesquisa de Tecnologias</h2>
+
+                <form action="#" method="GET">
+
+                    <label for="tecnologia">
+                        Tecnologia
+                    </label>
+
+                    <input
+                        type="search"
+                        id="tecnologia"
+                        name="tecnologia"
+                        placeholder="Ex.: React, Java, Python, AWS"
+                        required>
+
+                    <label for="categoria">
+                        Categoria
+                    </label>
+
+                    <input
+                        type="text"
+                        id="categoria"
+                        name="categoria"
+                        placeholder="Frontend, Backend, Cloud, Dados...">
+
+                    <label for="nivel">
+                        Nível
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nivel"
+                        name="nivel"
+                        placeholder="Júnior, Pleno ou Sênior">
+
+                    <button type="submit">
+                        Pesquisar Tecnologias
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- ===========================================================
+                 Formulário de Acesso de Consultores
+                 Método POST
+                 =========================================================== -->
+
+            <div class="form-box">
+
+                <h2>Acesso do Consultor</h2>
+
+                <form action="#" method="POST">
+
+                    <label for="usuario">
+                        Usuário
+                    </label>
+
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Informe seu usuário"
+                        required>
+
+                    <label for="email">
+                        E-mail Corporativo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="consultor@empresa.com"
+                        required>
+
+                    <label for="senha">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required>
+
+                    <button type="submit">
+                        Acessar Portal
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- ==========================================
+             ÁREA DOS CARTÕES
+             Os seis cartões serão adicionados
+             na próxima parte do código.
+             ========================================== -->
+
+        <section class="cards">
+            <!-- ======================================================
+                 CARD 1 - DEMANDA
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>Desenvolvedor Front-End React</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Cliente:</strong> Banco Digital Alpha</p>
+
+                    <p><strong>Modalidade:</strong> Híbrido</p>
+
+                    <p><strong>Local:</strong> São Paulo - SP</p>
+
+                    <p><strong>Experiência:</strong> Pleno</p>
+
+                    <p>
+                        Desenvolvimento de aplicações web modernas utilizando
+                        React, TypeScript e consumo de APIs REST.
+                    </p>
+
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">REST API</span>
+
+                </div>
+
+            </article>
+
+            <!-- ======================================================
+                 CARD 2 - DEMANDA
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>Especialista Cloud AWS</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Cliente:</strong> Tech Solutions</p>
+
+                    <p><strong>Modalidade:</strong> Remoto</p>
+
+                    <p><strong>Experiência:</strong> Sênior</p>
+
+                    <p><strong>Projeto:</strong> Migração para Cloud</p>
+
+                    <p>
+                        Implantação de infraestrutura escalável utilizando
+                        serviços AWS, automação e alta disponibilidade.
+                    </p>
+
+                    <span class="tag">AWS</span>
+                    <span class="tag">EC2</span>
+                    <span class="tag">Lambda</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Docker</span>
+
+                </div>
+
+            </article>
+
+            <!-- ======================================================
+                 CARD 3 - TALENTO
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>Consultor Java Full Stack</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Status:</strong> Disponível</p>
+
+                    <p><strong>Nível:</strong> Sênior</p>
+
+                    <p><strong>Experiência:</strong> 12 anos</p>
+
+                    <p><strong>Disponibilidade:</strong> Imediata</p>
+
+                    <p>
+                        Especialista em desenvolvimento corporativo,
+                        microsserviços, integração entre sistemas e arquitetura
+                        de aplicações escaláveis.
+                    </p>
+
+                    <span class="tag">Java</span>
+                    <span class="tag">Spring Boot</span>
+                    <span class="tag">Angular</span>
+                    <span class="tag">Oracle</span>
+                    <span class="tag">Microservices</span>
+
+                </div>
+
+            </article>
+            <!-- ======================================================
+                 CARD 4 - DEMANDA
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>Engenheiro de Dados</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Cliente:</strong> Data Analytics Group</p>
+
+                    <p><strong>Modalidade:</strong> Remoto</p>
+
+                    <p><strong>Experiência:</strong> Pleno / Sênior</p>
+
+                    <p><strong>Projeto:</strong> Plataforma de Big Data</p>
+
+                    <p>
+                        Construção de pipelines de dados, integração entre
+                        sistemas e otimização de processamento analítico.
+                    </p>
+
+                    <span class="tag">Python</span>
+                    <span class="tag">Spark</span>
+                    <span class="tag">Kafka</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Azure</span>
+
+                </div>
+
+            </article>
+
+            <!-- ======================================================
+                 CARD 5 - TALENTO
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>Consultora UX/UI Designer</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Status:</strong> Disponível</p>
+
+                    <p><strong>Nível:</strong> Sênior</p>
+
+                    <p><strong>Experiência:</strong> 10 anos</p>
+
+                    <p><strong>Especialidade:</strong> Produtos Digitais</p>
+
+                    <p>
+                        Profissional focada em experiência do usuário,
+                        design de interfaces, prototipação e pesquisas
+                        com usuários.
+                    </p>
+
+                    <span class="tag">Figma</span>
+                    <span class="tag">UX Research</span>
+                    <span class="tag">Design System</span>
+                    <span class="tag">Wireframe</span>
+                    <span class="tag">Prototipação</span>
+
+                </div>
+
+            </article>
+
+            <!-- ======================================================
+                 CARD 6 - DEMANDA
+                 ====================================================== -->
+            <article class="card">
+
+                <div class="card-topo">
+                    <h3>DevOps Engineer</h3>
+                </div>
+
+                <div class="card-conteudo">
+
+                    <p><strong>Cliente:</strong> Global Cloud Services</p>
+
+                    <p><strong>Modalidade:</strong> Híbrido</p>
+
+                    <p><strong>Experiência:</strong> Sênior</p>
+
+                    <p><strong>Projeto:</strong> Modernização da Plataforma</p>
+
+                    <p>
+                        Atuação com integração contínua, entrega contínua,
+                        automação de infraestrutura e observabilidade.
+                    </p>
+
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">Linux</span>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </div>
+
+    <!-- ==========================================
+         RODAPÉ
+         ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Portal Corporativo de Demandas e Talentos Tech
+        </p>
+
+        <p>
+            Plataforma para gestão de demandas, tecnologias e consultores especializados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
